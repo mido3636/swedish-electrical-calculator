@@ -1,13 +1,46 @@
-# Electrical Installation Calculator
+# Swedish Electrical Calculator ⚡🇸🇪
 
-This web application allows users to perform electrical installation calculations based on Swedish regulations. It provides functionalities for calculating power metrics, voltage drop, and determining the required cable size and type based on various external factors and installation types.
+Professional electrical installation calculator following Swedish standards (SS 424 14 26, SEK Handbok 444) with smart auto-selection features.
 
-## Features
+## ⚡ Features
 
-- Calculate kW, amps, and volts based on user input.
-- Determine voltage drop in electrical installations.
-- Calculate required cable size and type based on power and installation conditions.
-- Adhere to Swedish electrical regulations and standards.
+- **Smart Auto-Selection**: Automatically selects insulation type based on installation method and ambient temperature based on environment
+- **Swedish Standards Compliance**: Full compliance with SS 424 14 26 and SEK Handbok 444
+- **Real Cable Specifications**: Uses actual Swedish supplier cable data (H07V-K, EQLQ, AXQJ, etc.)
+- **Interactive Shopping List**: Shows exactly which cables to buy with supplier examples
+- **Visual Feedback**: Green highlights show which fields are auto-filled
+- **Professional Results**: MCB selection, RCD requirements, and complete installation specs
+
+## 🔧 How to Use
+
+1. **Select Installation Type** - The app automatically chooses the right insulation type
+2. **Pick Environment** - Ambient temperature is auto-set based on your choice  
+3. **Enter Power and Length** - Input your specific installation requirements
+4. **Get Complete Results** - Cable sizing, MCB selection, RCD requirements, and shopping list
+
+## 📐 Technical Standards
+
+- **Temperature Derating**: Based on Table 52B.14
+- **Grouping Factors**: Following Table 52B.17  
+- **Voltage Drop**: Compliant with 4% limit for final circuits
+- **Cable Selection**: Real specifications from Swedish suppliers (Ahlsell, Elkedjan, etc.)
+
+## 💡 Smart Features
+
+The calculator automatically handles:
+- **Underground/Outdoor installations** → PEX insulation
+- **Indoor installations** → PVC insulation  
+- **Environment-based temperature settings** with typical values
+- **Visual feedback** for auto-selected fields
+
+## 🌐 Getting Online
+
+To deploy your own version:
+1. Push this repository to GitHub
+2. Go to repository Settings → Pages  
+3. Select "Deploy from a branch"
+4. Choose "main" branch and "/docs" folder
+5. Your calculator will be live at: `https://[username].github.io/[repository-name]/`
 
 ## Project Structure
 

@@ -1,0 +1,37 @@
+[
+    {
+        "type": "H07V-U",
+        "description": "Single-core PVC insulated cable, suitable for fixed installations.",
+        "currentRating": "10-16 A",
+        "voltageRating": "450/750 V",
+        "application": "Indoor use, in dry conditions."
+    },
+    {
+        "type": "H07Z-U",
+        "description": "Single-core halogen-free cable, suitable for fixed installations.",
+        "currentRating": "10-16 A",
+        "voltageRating": "450/750 V",
+        "application": "Indoor use, in dry conditions, halogen-free."
+    },
+    {
+        "type": "H05VV-F",
+        "description": "Flexible PVC cable, suitable for appliances and tools.",
+        "currentRating": "10-16 A",
+        "voltageRating": "300/500 V",
+        "application": "Indoor use, for flexible applications."
+    },
+    {
+        "type": "NYM",
+        "description": "Multi-core PVC insulated cable, suitable for fixed installations.",
+        "currentRating": "16-32 A",
+        "voltageRating": "450/750 V",
+        "application": "Indoor and outdoor use, in dry and damp conditions."
+    },
+    {
+        "type": "NYY",
+        "description": "Armoured cable for underground installations.",
+        "currentRating": "16-32 A",
+        "voltageRating": "450/750 V",
+        "application": "Outdoor use, suitable for direct burial."
+    }
+]
