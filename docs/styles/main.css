@@ -26,6 +26,22 @@ h1 {
     font-weight: 300;
 }
 
+h1 .brand {
+    font-size: 0.4em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+h2 .brand {
+    font-size: 0.5em;
+    font-weight: 400;
+    color: #888;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
 main {
     max-width: 800px;
     margin: 40px auto;
