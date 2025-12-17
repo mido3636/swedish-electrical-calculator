@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Installation Calculator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Electrical Installation Calculator</h1>
+    </header>
+    <main>
+        <section id="calculations">
+            <h2>Electrical Installation Calculator</h2>
+            <form id="calcForm">
+                <div class="form-group">
+                    <label for="voltage">Voltage (V):</label>
+                    <select id="voltage" name="voltage" required>
+                        <option value="230">230V (1-fas)</option>
+                        <option value="400">400V (3-fas)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputType">Input Type:</label>
+                    <select id="inputType" name="inputType" required>
+                        <option value="power">Power (kW)</option>
+                        <option value="current">Current (A)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="powerGroup">
+                    <label for="power">Power (kW):</label>
+                    <input type="number" id="power" name="power" step="0.1" min="0">
+                </div>
+
+                <div class="form-group" id="currentGroup" style="display: none;">
+                    <label for="current">Current (A):</label>
+                    <input type="number" id="current" name="current" step="0.1" min="0">
+                </div>
+
+                <div class="form-group" id="powerFactorGroup">
+                    <label for="powerFactor">Power Factor (cos φ):</label>
+                    <input type="number" id="powerFactor" name="powerFactor" value="0.8" step="0.01" min="0" max="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="distance">Cable Length (m):</label>
+                    <input type="number" id="distance" name="distance" step="0.1" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="installationType">Installation Method:</label>
+                    <select id="installationType" name="installationType" required>
+                        <option value="A1">A1 - Isolerad ledare i rör i värmeisolering</option>
+                        <option value="A2">A2 - Isolerad ledare i rör i vägg</option>
+                        <option value="B1">B1 - Kabel i rör på vägg/i luften</option>
+                        <option value="B2">B2 - Kabel på vägg/i luften</option>
+                        <option value="C">C - Kabel i mark direkt nedgrävd</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cableType">Cable Material:</label>
+                    <select id="cableType" name="cableType" required>
+                        <option value="copper">Copper (Cu)</option>
+                        <option value="aluminum">Aluminum (Al)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="insulation">Insulation Type:</label>
+                    <select id="insulation" name="insulation" required>
+                        <option value="PVC">PVC</option>
+                        <option value="PEX">PEX/EPR</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="environment">Environment / Miljö:</label>
+                    <select id="environment" name="environment" required>
+                        <option value="indoor">Indoor / Inomhus (15-35°C)</option>
+                        <option value="outdoor">Outdoor / Utomhus (10-32°C)</option>
+                        <option value="underground">Underground / Underjordisk (10-20°C)</option>
+                        <option value="attic">Attic / Vind (15-45°C)</option>
+                        <option value="basement">Basement / Källare (12-25°C)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ambientTemp">Ambient Temperature (°C):</label>
+                    <input type="number" id="ambientTemp" name="ambientTemp" value="30" min="10" max="80" required>
+                    <small id="tempRange">Reference: 30°C (SS 424 14 26) | Range: 10°C to 80°C (Tabell 52B.14)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="grouping">Number of Cables Together:</label>
+                    <select id="grouping" name="grouping" required>
+                        <option value="1" selected>1 (isolated)</option>
+                        <option value="2">2 cables</option>
+                        <option value="3">3 cables</option>
+                        <option value="4">4 cables</option>
+                        <option value="5">5 cables</option>
+                        <option value="6">6 cables</option>
+                        <option value="9">7-9 cables</option>
+                        <option value="12">10-12 cables</option>
+                        <option value="16">13-16 cables</option>
+                        <option value="20">17-20 cables</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="application">Application / Användning:</label>
+                    <select id="application" name="application" required>
+                        <option value="socket">Socket outlets / Uttag (requires 30mA RCD)</option>
+                        <option value="lighting">Lighting / Belysning</option>
+                        <option value="fixed">Fixed equipment / Fast installation</option>
+                        <option value="bathroom">Bathroom/Wet room / Badrum (requires 30mA RCD)</option>
+                        <option value="outdoor">Outdoor / Utomhus (requires 30mA RCD)</option>
+                        <option value="motor">Motor/Industrial / Motor/Industri</option>
+                        <option value="distribution">Distribution board / Fördelning</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Calculate</button>
+                
+                <div class="warning-box">
+                    <strong>⚠️ VARNING / WARNING:</strong>
+                    <p>Detta är ett beräkningsverktyg baserat på SEK Handbok 444 (inkluderar SS 424 14 26 för kabeldimensionering och SS 436 40 00 för installationsregler). Alla elinstallationer måste utföras av behörig elektriker och godkännas enligt gällande regelverk.</p>
+                    <p>This is a calculation tool based on SEK Handbok 444 (includes SS 424 14 26 for cable sizing and SS 436 40 00 for installation regulations). All electrical installations must be performed by qualified electrician and approved according to regulations.</p>
+                </div>
+            </form>
+            <div id="results"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Electrical Installation Calculator</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

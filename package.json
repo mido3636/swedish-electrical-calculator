@@ -1,0 +1,28 @@
+{
+  "name": "electrical-calculator-app",
+  "version": "1.0.0",
+  "description": "A web application for performing electrical installation calculations based on Swedish regulations.",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'Test step not defined'"
+  },
+  "keywords": [
+    "electrical",
+    "calculator",
+    "Swedish regulations",
+    "installation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/electrical-calculator-app.git"
+  },
+  "homepage": "https://yourusername.github.io/electrical-calculator-app"
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "type": "Residential",
+        "description": "Typical home installations including lighting and power outlets.",
+        "requirements": {
+            "maxLoad": "16A",
+            "cableType": "H07V-U"
+        }
+    },
+    {
+        "type": "Commercial",
+        "description": "Installations in commercial buildings, including offices and retail spaces.",
+        "requirements": {
+            "maxLoad": "32A",
+            "cableType": "H07Z-U"
+        }
+    },
+    {
+        "type": "Industrial",
+        "description": "Heavy-duty installations for industrial applications.",
+        "requirements": {
+            "maxLoad": "125A",
+            "cableType": "H07RN-F"
+        }
+    },
+    {
+        "type": "Outdoor",
+        "description": "Installations exposed to outdoor conditions.",
+        "requirements": {
+            "maxLoad": "16A",
+            "cableType": "H07Z-U"
+        }
+    },
+    {
+        "type": "Special",
+        "description": "Installations with specific requirements, such as medical or hazardous locations.",
+        "requirements": {
+            "maxLoad": "10A",
+            "cableType": "H07V-R"
+        }
+    }
+]
