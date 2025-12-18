@@ -579,7 +579,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             Exempel: ${getCableExamples(selectedSize, voltage)}
                         </p>
                         <p style="margin: 8px 0 0 0; font-size: 16px; color: #333;">
-                            Längd: ${distance}m + 10% extra = <strong style="color: #667eea; font-size: 18px;">${Math.ceil(distance * 1.1)}m</strong>
+                            Längd: ${distance}m + 10% extra = <strong style="color: #667eea; font-size: 18px;">${(distance * 1.1).toFixed(1)}m</strong>
                         </p>
                         ${cableUpgraded ? '<p style="margin: 8px 0 0 0; font-size: 14px; color: #e67e22; font-weight: bold;">⚠️ Uppgraderad från ursprunglig beräkning för MCB-kompatibilitet</p>' : ''}
                     </div>
