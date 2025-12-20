@@ -702,4 +702,19 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     });
+
+    // Visitor counter
+    function updateVisitorCount() {
+        let visits = localStorage.getItem('mdoyle-calc-visits') || 0;
+        visits = parseInt(visits) + 1;
+        localStorage.setItem('mdoyle-calc-visits', visits);
+        
+        const visitElement = document.getElementById('visit-count');
+        if (visitElement) {
+            visitElement.textContent = visits.toLocaleString();
+        }
+    }
+
+    // Update visitor count when page loads
+    updateVisitorCount();
 });
